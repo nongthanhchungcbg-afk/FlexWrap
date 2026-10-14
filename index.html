@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài thực hành CSS Flexbox về thuộc tính flex-wrap.">
+    <title>Thực hành CSS | flex-wrap</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="Flex Lab trang chủ">
+            <span class="brand-mark">F</span>
+            <span>Flex Lab</span>
+        </a>
+        <span class="course-label">CSS · FLEXBOX</span>
+    </header>
+
+    <main class="page">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">BÀI THỰC HÀNH</p>
+            <h1 id="page-title">Khám phá <span>flex-wrap</span></h1>
+            <p class="intro-copy">Điều khiển cách các Flex Items xuống dòng khi không đủ chỗ trong Flex Container.</p>
+        </section>
+
+        <section class="demo-card" aria-labelledby="demo-title">
+            <div class="demo-heading">
+                <div>
+                    <p class="eyebrow">TƯƠNG TÁC TRỰC TIẾP</p>
+                    <h2 id="demo-title">Thử các giá trị</h2>
+                </div>
+                <span class="code-pill">display: flex</span>
+            </div>
+
+            <div class="controls" role="group" aria-label="Chọn giá trị flex-wrap">
+                <button class="mode-button" type="button" data-mode="nowrap" aria-pressed="false">nowrap</button>
+                <button class="mode-button is-selected" type="button" data-mode="wrap" aria-pressed="true">wrap</button>
+                <button class="mode-button" type="button" data-mode="wrap-reverse" aria-pressed="false">wrap-reverse</button>
+                <button class="mode-button" type="button" data-mode="initial" aria-pressed="false">initial</button>
+            </div>
+
+            <div class="canvas">
+                <div class="canvas-meta">
+                    <span>FLEX CONTAINER</span>
+                    <span class="container-size">600 × 300 px</span>
+                </div>
+                <div class="flex-container" id="flex-container" data-mode="wrap" aria-label="Ví dụ Flexbox với sáu Flex Items">
+                    <div class="item"><span class="item-number">01</span><span>Item 1</span></div>
+                    <div class="item"><span class="item-number">02</span><span>Item 2</span></div>
+                    <div class="item"><span class="item-number">03</span><span>Item 3</span></div>
+                    <div class="item"><span class="item-number">04</span><span>Item 4</span></div>
+                    <div class="item"><span class="item-number">05</span><span>Item 5</span></div>
+                    <div class="item"><span class="item-number">06</span><span>Item 6</span></div>
+                </div>
+                <p class="mode-description" id="mode-description" aria-live="polite">
+                    <strong>wrap</strong> — Các item tự động chuyển xuống dòng mới khi hết chỗ.
+                </p>
+            </div>
+
+            <div class="code-example">
+                <div class="code-heading"><span>CSS HIỆN TẠI</span><span class="code-dot"></span></div>
+                <pre><code>.container {
+  display: flex;
+  flex-wrap: <span id="code-value">wrap</span>;
+  gap: 10px;
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="summary" aria-label="Tóm tắt flex-wrap">
+            <article class="summary-item">
+                <span class="summary-icon">↔</span>
+                <div><h2>nowrap</h2><p>Giữ tất cả item trên một dòng.</p></div>
+            </article>
+            <article class="summary-item">
+                <span class="summary-icon">↙</span>
+                <div><h2>wrap</h2><p>Cho phép item xuống dòng mới.</p></div>
+            </article>
+            <article class="summary-item">
+                <span class="summary-icon">↖</span>
+                <div><h2>wrap-reverse</h2><p>Đảo hướng xếp các dòng.</p></div>
+            </article>
+            <article class="summary-item">
+                <span class="summary-icon">↺</span>
+                <div><h2>initial</h2><p>Trở về mặc định là nowrap.</p></div>
+            </article>
+        </section>
+
+        <footer class="site-footer">
+            <span>Thực hành CSS Flexbox</span>
+            <span>HTML · CSS · JavaScript</span>
+        </footer>
+    </main>
+</body>
+</html>
